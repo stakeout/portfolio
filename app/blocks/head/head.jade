@@ -1,0 +1,23 @@
+head
+	meta(charset='utf-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
+	meta(http-equiv='X-UA-Compatible' content='IE=edge')
+	meta(name='format-detection' content='telephone=no')
+	meta(name='format-detection' content='address=no')
+	link(sizes='192x192' href='/favicon-192x192.png' rel='icon' type='image/png')
+	link(sizes='160x160' href='/favicon-160x160.png' rel='icon' type='image/png')
+	link(sizes='96x96'   href='/favicon-96x96.png'   rel='icon' type='image/png')
+	link(sizes='16x16'   href='/favicon-16x16.png'   rel='icon' type='image/png')
+	link(sizes='32x32'   href='/favicon-32x32.png'   rel='icon' type='image/png')
+
+	link(rel='manifest' href='/manifest.json')
+
+	meta(name='application-name' content=pageTitle || '')
+	meta(name='msapplication-tooltip' content=pageDescription || '')
+	//- http://realfavicongenerator.net/faq#why_ico_not_declared
+
+	block head
+	title= pageTitle || ''
+	meta(name='description' content=pageDescription || '')
+	meta(name='keywords' content=pageKeywords || '')
+	link(href='assets/styles/app.min.css?t=' + timestamp rel='stylesheet')

@@ -1,0 +1,78 @@
+.heading
+	&_h1
+		font-family $h-font
+		font-size 63px
+		color $c_top-menu
+		line-height 70px
+		font-weight 400
+		text-transform uppercase
+	&_h2
+		font-family $h-font
+		font-size 35px
+		color $c_top-menu
+		line-height 40px
+		font-weight 400
+		text-transform uppercase
+	&_h3
+		font-family $h-font
+		font-size 1rem
+		color $c_top-menu
+		line-height 1.25rem
+		font-weight 700
+
+.page__inner
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+	margin: 0 auto
+
+.page-content
+	flex: 1
+
+.container
+	width: $page-width
+	margin: 0 auto
+	padding-left 10px
+	padding-right 10px
+
+.overlay
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	bottom 0
+	width: 100%
+	min-height: 100vh
+	background-color: rgba(0,0,0, .5)
+	z-index: 150
+
+.link
+	text-decoration: none
+
+.image
+	max-width: 100%
+	height: auto
+.btn
+	display inline-block
+	vertical-align top
+	border: none
+	outline: none
+
+.icon, .form-icon
+	position absolute
+	display inline-block
+	vertical-align top
+	fill: inherit
+	stroke: inherit
+
+.input-wrapper
+	position relative
+
+.input-field
+	display inline-block
+	vertical-align top
+	border: none
+	outline: none
+
+.hidden
+	display none
