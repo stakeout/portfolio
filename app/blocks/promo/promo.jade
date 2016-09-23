@@ -1,0 +1,11 @@
+include /blocks/intro/intro
+mixin promo()
+	+b.promo&attributes(attributes)
+		+e.top-row
+			+e.A.authorization.btn(href='authorization.html') Авторизоваться
+		+e.middle-row.container
+			+intro
+		+e.bottom-row.container
+			p &copy; Вадим Новаш  | made with 
+				i.heart &nbsp;&#10084; 
+				| | &nbsp;2016

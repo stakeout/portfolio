@@ -1,8 +1,8 @@
 extends /blocks/layout-default/layout-default
-
+include /blocks/promo/promo
 block head
 	- var pageTitle = 'Портфолио';
 	- var pageDescription = '';
 	- var pageKeywords = '';
 block content
-
+	+promo

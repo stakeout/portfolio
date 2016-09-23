@@ -1,0 +1,30 @@
+.navigation
+	display block
+	&_intro
+		border-radius 5px
+	&__list
+		&_intro
+			display -webkit-flex
+			display -ms-flex
+			display flex
+			justify-content space-between
+	&__item
+		&_intro
+			min-height 45px
+			background-color $c_green
+			border-right 2px solid rgba(222,227,231,.5)
+			&:last-child
+				border-right 2px solid transparent
+				border-radius 0 0 5px 0
+			&:first-child
+				border-radius 0 0 0 5px 
+			&:hover
+				background-color $c_green-hover
+			a
+				padding-left 31px
+				padding-right 31px
+				color $c_white
+				font-family $base-font
+				font-size 1rem
+				font-weight 500
+				line-height 45px

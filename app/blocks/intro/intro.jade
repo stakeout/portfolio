@@ -1,0 +1,11 @@
+include /blocks/socials/socials
+include /blocks/navigation/navigation
+mixin intro()
+	+b.SECTION.intro&attributes(attributes)
+		+e.inner
+			+e.img-wrapper
+				img.image(src='assets/images/man.jpg' width='147' height='147' alt='I am')
+			+e.name Вадим Новаш
+			+e.description Личный сайт веб-разработчика
+			+socials('intro')
+			+navigation('intro')

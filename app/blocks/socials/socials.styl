@@ -1,2 +1,26 @@
 .socials
-	display block
+	display -webkit-flex
+	display -ms-flex
+	display flex
+	justify-content center
+	&_intro
+		margin-bottom 40px
+	&__list
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		margin 0 auto
+	&__link
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		font-size 0
+	&__item_intro
+		margin-right 28px
+		&:last-child
+			margin-right 0
+	&__icon
+		margin auto
+		fill $c_green
+		&:hover
+			fill $c_green-hover

@@ -1,5 +1,5 @@
-import runSequence from 'run-sequence';
 import gulp from 'gulp';
+import runSequence from 'run-sequence';
 
 gulp.task('styles:dependencies', () => (
 	runSequence(
@@ -10,7 +10,7 @@ gulp.task('styles:dependencies', () => (
 ));
 
 gulp.task('default', () => (
-	runSequence(
+	runSequence('images',
 		[
 			'styles:dependencies',
 			'templates'
