@@ -1,3 +1,17 @@
+include /blocks/author-photo/author-photo
 mixin header()
-	+b.header&attributes(attributes)
-		block
+	+b.HEADER.page-header&attributes(attributes)
+		+e.inner
+			+e.top-row
+				+socials('header')
+				+e.A.nav-toggler(href='#')
+					span menu
+			+e.bottom-row
+				+author-photo
+				+e.B.page-title блог
+				+e.P.page-desription Статьи, которые я написал
+				
+				
+			
+				
+			
