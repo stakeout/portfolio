@@ -1,0 +1,7 @@
+include /blocks/blog-content/blog-content
+include /blocks/blog-navigation/blog-navigation
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+blog-navigation
+			+blog-content

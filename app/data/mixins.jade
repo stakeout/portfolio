@@ -1,3 +1,19 @@
 mixin icon(iconName,width,height)
 	+e.SVG(class='icon icon_' + iconName width= width + 'px'  height= height + 'px' role='img')
 			use(xlink:href='assets/images/svg/icon.svg#icon_#{iconName}')
+
+//lorem
+mixin capitalize(string)
+	= string.charAt ( 0 ).toUpperCase () + string.slice ( 1 )
+
+mixin lorem(howmany)
+	- var words = ['consectetur', 'adipiscing', 'elit', 'curabitur', 'vel', 'hendrerit', 'libero', 'eleifend', 'blandit', 'nunc', 'ornare', 'odio', 'ut', 'orci', 'gravida', 'imperdiet', 'nullam', 'purus', 'lacinia', 'a', 'pretium', 'quis', 'congue', 'praesent', 'sagittis', 'laoreet', 'auctor' ]
+	- for (var i = 0; i < howmany; i++) {
+	- var nextWord = words[Math.floor((Math.random()* ( words.length - 1 ) ))]
+	if (i == 0)
+		mixin capitalize(nextWord)
+	else
+		= ' ' + nextWord
+		if i == howmany - 1
+			= '.'
+	- }

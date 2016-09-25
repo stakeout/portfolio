@@ -1,2 +1,20 @@
-.footer
-	display block
+.page-footer
+	background-color #555b5e
+	&__top-row,
+	&__bottom-row
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		justify-content space-between
+		align-items flex-start
+		padding-left 30px
+		padding-right 30px
+	&__top-row
+		border-bottom 1px solid #646a6d
+	&__text
+		opacity 0.5
+		color $c_white
+		font-family $base-font
+		font-size 1rem
+		font-weight 300
+		line-height 1.5rem

@@ -1,0 +1,31 @@
+mixin blog-content()
+	+b.blog-content&attributes(attributes)
+		+e.ARTICLE.article
+			header
+				+e.H1.post-title Самое важное в SASS
+				+e.TIME.post-date 22 ноября 2016
+			p 
+				+lorem(200)
+			p
+				code
+				| function checkParent (src, dest) {
+				br
+				|      while (src != null) {
+				br
+				|        if (src.tagName == dest) return src
+				br
+				|         src = src.parentElement
+				br
+				|      }
+				br
+				|      return null
+				br
+				|     }
+		+e.ARTICLE.article
+			header
+				+e.H1.post-title Приемы в верстке, без которых не обходится ни один сайт
+				+e.TIME.post-date 12 ноября 2016
+			p 
+				+lorem(150)
+			p
+				+lorem(300)

@@ -3,12 +3,12 @@ include /blocks/navigation/navigation
 include /blocks/copyright/copyright
 mixin footer()
 	+b.FOOTER.page-footer&attributes(attributes)
-		+e.inner
+		+e.inner.container
 			+e.top-row
 				+navigation
 				+socials('footer')
 			+e.bottom-row
-				+e.text Я веб-разработчик из Минска. Этот сайт я сделал в рамках
+				+e.P.text Я веб-разработчик из Минска. Этот сайт я сделал в рамках
 					br
 					| обучения в Школе онлайн образования Loftschool
 				+copyright

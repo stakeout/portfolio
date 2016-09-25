@@ -1,12 +1,13 @@
-mixin socials(modifier)
-	+b(class='socials_#{modifier}')&attributes(attributes)
-		+e.UL(class='list_#{modifier}')
-			+e.LI(class='item_#{modifier}')
+mixin socials(obj)
+	- icons = obj.src
+	+b(class='socials_#{obj.modifier}')&attributes(attributes)
+		+e.UL(class='list_#{obj.modifier}')
+			+e.LI(class='item_#{obj.modifier}')
 				+e.A.link._vk.link(href='https://vk.com/id268045389') vkontact
-					+icon('vk', 31, 17)
-			+e.LI(class='item_#{modifier}')
+					+icon(obj.name1, 31, 17)
+			+e.LI(class='item_#{obj.modifier}')
 				+e.A.link._github.link(href='https://github.com/stakeout') github
-					+icon('github', 26, 22)
-			+e.LI(class='item_#{modifier}')
+					+icon(obj.name2, 26, 22)
+			+e.LI(class='item_#{obj.modifier}')
 				+e.A.link._linkedin.link(href='') linkedin
-					+icon('in', 24, 22)
+					+icon(obj.name3, 24, 22)

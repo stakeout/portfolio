@@ -1,17 +1,16 @@
 include /blocks/author-photo/author-photo
-mixin header()
-	+b.HEADER.page-header&attributes(attributes)
-		+e.inner
-			+e.top-row
-				+socials('header')
-				+e.A.nav-toggler(href='#')
-					span menu
-			+e.bottom-row
+mixin header(obj)
+	+b.HEADER(class='page-header_#{obj.modifier}')&attributes(attributes)
+		+e(class='inner_#{obj.modifier}').container
+			+e(class='top-row_#{obj.modifier}')
+				+socials({modifier:'header',
+									name1:'vk',
+									name2:'github',
+									name3:'in'
+									})
+				+e.A(class='nav-toggler_#{obj.modifier}').nav-toggler-js(href='#')
+					+icon('hamburger', 40, 35)
+			+e(class='bottom-row_#{obj.modifier}')
 				+author-photo
-				+e.B.page-title блог
-				+e.P.page-desription Статьи, которые я написал
-				
-				
-			
-				
-			
+				+e.B.page-title #{obj.title}
+				+e.P.page-description #{obj.description}
