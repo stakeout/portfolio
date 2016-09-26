@@ -3,7 +3,9 @@ mixin header(obj)
 	+b.HEADER(class='page-header_#{obj.modifier}')&attributes(attributes)
 		+e(class='inner_#{obj.modifier}').container
 			+e(class='top-row_#{obj.modifier}')
+				- var icons = ["vk","github","in"];
 				+socials({modifier:'header',
+									icons:icons,
 									name1:'vk',
 									name2:'github',
 									name3:'in'

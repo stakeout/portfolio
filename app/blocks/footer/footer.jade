@@ -6,7 +6,12 @@ mixin footer()
 		+e.inner.container
 			+e.top-row
 				+navigation
-				+socials('footer')
+				+socials({modifier:'footer',
+									icons:icons,
+									name1:'vk',
+									name2:'github',
+									name3:'in'
+									})
 			+e.bottom-row
 				+e.P.text Я веб-разработчик из Минска. Этот сайт я сделал в рамках
 					br
