@@ -24,16 +24,17 @@
 		display flex
 		justify-content space-between
 		margin-bottom 90px
-		&_blog
+		&_blog,
+		&_about
 			margin-bottom 16px
 			padding-left 20px
 			padding-right 20px
-			svg
+		svg
+			fill $c_white
+			opacity .5
+			&:hover
 				fill $c_white
-				opacity .5
-				&:hover
-					fill $c_white
-					opacity 1
+				opacity 1
 	&__nav-toggler
 		margin-top 39px
 		svg

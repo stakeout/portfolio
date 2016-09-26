@@ -1,0 +1,10 @@
+include /blocks/about-me/about-me
+include /blocks/skills/skills
+include /blocks/map/map
+
+mixin main()
+	+b.MAIN.page-content
+		+e.inner.container
+			+about-me
+			+skills
+		+map

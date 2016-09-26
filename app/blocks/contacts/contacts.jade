@@ -1,0 +1,18 @@
+mixin contacts()
+	+b.SECTION.contacts&attributes(attributes)
+		+e.inner
+			+e.H2.title Контакты
+			+e.UL.list
+				+e.LI.item
+					+e.A.link._skype.link(href='skype:vadim.novash?chat') vadim.novash
+						+icon('skype',24,24)
+				+e.LI.item
+					+e.A.link._mail.link(href='mailto:novash@tut.by') novash@tut.by
+						+icon('envelope',23,17)
+				+e.LI.item
+					+e.A.link._phone.link +7 931 200 93 24
+						+icon('phone',19,18)
+				+e.LI.item
+					+e.A.link._map.link г.Минск, ул. Инская д. 5
+						+icon('map_marker',19,24)
+				

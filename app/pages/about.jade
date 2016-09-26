@@ -1,7 +1,16 @@
 extends /blocks/layout-default/layout-default
-
+include /blocks/header/header
+include /blocks/content/about/main
+include /blocks/footer/footer
 block head
 	- var pageTitle = 'Обо мне';
 	- var pageDescription = '';
 	- var pageKeywords = '';
 block content
+	+header({
+		modifier: 'about',
+		title: 'Новаш Вадим',
+		description: 'Личный сайт веб-разработчика'
+		})
+	+main
+	+footer
