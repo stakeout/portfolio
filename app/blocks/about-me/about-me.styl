@@ -1,7 +1,20 @@
 .about-me
-	max-width rem(580px)
+	position relative
+	max-width 50%
 	padding-left 70px
 	padding-right 70px
+	margin-left -10
+	background #efeee9
+	&:before
+		position absolute
+		content ''
+		top -152px
+		left 0
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 152px 0 0 605px;
+		border-color: transparent transparent transparent #efeee9;
 	&__title
 		margin-bottom 60px
 		color $c_grey-hover
