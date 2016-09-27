@@ -17,6 +17,13 @@
 		display -ms-flex
 		display flex
 		font-size 0
+		width rem(36px)
+		height rem(36px)
+	&__icon
+		margin auto
+		fill $c_green
+		&:hover
+			fill $c_green-hover
 	&__item
 		margin-right 28px
 		&:last-child
@@ -26,19 +33,21 @@
 			display -ms-flex
 			display flex
 			justify-content center
-			width rem(48px)
-			height rem(48px)
+			width rem(36px)
+			height rem(36px)
+			margin-right 10px
 			border-radius 50%
 			border 0.031rem solid #f9f9f9
 			opacity .5
 			text-align center
 			&:hover
-				background-color $c_white
+				border none
 				opacity 1
+				a
+					border-radius 50%
+					background-color #fff
+					& > svg
+						fill $c_grey-hover
+						opacity 1
 			.link
 				margin auto
-	&__icon
-		margin auto
-		fill $c_green
-		&:hover
-			fill $c_green-hover
