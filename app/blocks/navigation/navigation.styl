@@ -10,6 +10,10 @@
 			justify-content space-between
 			background-color $c_green
 			border-radius 0 0 5px 5px
+		&_footer
+			display -webkit-flex
+			display -ms-flex
+			display flex
 	&__item
 		&_intro
 			min-height 45px
@@ -31,3 +35,15 @@
 				font-weight 500
 				line-height 45px
 				border-right 2px solid rgba(222,227,231,.5)
+		&_footer
+			margin-right 41px
+			&:last-child
+				margin-right 0
+			a
+				color $c_white
+				font-family $base-font
+				font-size 1rem
+				font-weight 500
+				line-height 1.5rem
+				&:hover
+					text-decoration underline

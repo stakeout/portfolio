@@ -5,10 +5,16 @@ mixin footer()
 	+b.FOOTER.page-footer&attributes(attributes)
 		+e.inner.container
 			+e.top-row
-				+navigation
+				+navigation({modifier:'footer',
+										menu:{'Мои работы':'works.html',
+													'Обо мне':'about.html',
+													'Блог':'blog.html',
+													'Авторизация':'login.html'
+												}
+										})
 				+socials({modifier:'footer',
 									icons:icons,
-									name1:{'vk',38,14}
+									name1:'vk',
 									name2:'github',
 									name3:'in'
 									})

@@ -12,4 +12,9 @@ mixin intro()
 								name2:'github',
 								name3:'in'
 							})
-			+navigation('intro')
+			+navigation({modifier:'intro',
+									menu:{'Мои работы':'works.html',
+												'Обо мне':'about.html',
+												'Блог':'blog.html'
+											}
+									})
