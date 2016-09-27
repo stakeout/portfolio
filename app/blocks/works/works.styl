@@ -1,0 +1,93 @@
+.works
+	width 100%
+	&__inner
+		position relative
+		max-width rem(1200px)
+		background-color #faf8f0
+		padding-left 10px
+		padding-right 10px
+		&:before
+			position absolute
+			content ''
+			left 0
+			top -120px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 120px 0 0 700px;
+			border-color: transparent transparent transparent #faf8f0;
+		&:after
+			position absolute
+			content ''
+			right 0
+			top -120px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 0 120px 700px;
+			border-color: transparent transparent #faf8f0 transparent;
+	&__title
+		padding-top 45px
+		margin-bottom 70px
+		color $c_grey-hover
+		font-family $h-font
+		font-size 3.938rem
+		font-weight 400
+		line-height 3.5rem
+		text-align center
+	&__works-wrapper
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		margin-right -10px
+		margin-left -10px
+		min-height rem(745px)
+		background-color #efebe0
+	&__left-column
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		flex-direction column
+		justify-content: center;
+		align-items center
+		width 50%
+		padding-left 10px
+		background-color #f0efe9
+		h2
+			margin-bottom 40px
+			color $c_grey
+			font-family $h-font
+			font-size 2.188rem
+			font-weight 400
+			line-height 2.563rem
+			text-align center
+	&__technology
+		min-width rem(420px)
+		margin-bottom 40px
+		padding-top 18px
+		padding-bottom 18px
+		color $c_green
+		font-family $base-font
+		font-size 1rem
+		font-weight 500
+		text-transform uppercase
+		text-align center
+		border-top 1px solid rgba(16,156,142,.3)
+		border-bottom 1px solid rgba(16,156,142,.3)
+	&__go-to-site
+		width 200px
+		min-height 45px
+		color $c_white
+		font-family $base-font
+		font-size 1rem
+		font-weight 500
+		line-height 45px
+		text-align center
+		background-color $c_green
+		border-radius 5px
+		&:hover
+			background-color $c_green-hover
+	&__right-column
+		width 50%
+		padding-right 10px
+		//active work 230x310

@@ -1,0 +1,20 @@
+mixin works()
+	+b.SECTION.works&attributes(attributes)
+		+e.inner.container
+			+e.H1.title мои работы
+			+e.works-wrapper
+				+e.left-column
+					h2 сайт школы онлайн
+						br 
+						|образования
+					+e.P.technology html, css, javascript
+					+e.A.go-to-site.link.btn(href='#') Посмотреть сайт
+				+e.right-column
+					+e.presentation
+						+e.UL.list
+							+e.LI.item
+							+e.LI.item
+							+e.LI.item
+					+e.controls
+						.prev
+						.next

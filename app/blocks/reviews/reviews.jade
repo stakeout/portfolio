@@ -1,0 +1,28 @@
+include /blocks/feedback-form/feedback-form
+mixin reviews()
+	+b.SECTION.reviews&attributes(attributes)
+		+e.inner.container
+			+e.H2.title что обо мне
+				br
+				|говорят
+			+e.UL.list
+				+e.LI.item
+					+e.P.review-text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+					+e.review-author
+						+e.img-wrap
+							img(src="http://placehold.it/80x80", alt="Ковальчук Дмитрий")
+						+e.author-name
+							p Ковальчук Дмитрий
+								br
+								span основатель Loftschool
+				+e.LI.item
+					+e.P.review-text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+					+e.review-author
+						+e.img-wrap
+							img(src="http://placehold.it/80x80", alt="Ковальчук Дмитрий")
+						+e.author-name
+							p Зар Захаров
+								br
+								span преподаватель
+			+feedback-form
+			

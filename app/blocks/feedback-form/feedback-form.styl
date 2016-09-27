@@ -1,0 +1,50 @@
+.feedback-form
+	width rem(380px)
+	min-height rem(438px)
+	margin 0 auto
+	padding-top 42px
+	padding-left 20px
+	padding-right 20px
+	background-color #fcfcfc
+	&__title
+		margin-bottom 32px
+		color $c_grey
+		font-family $h-font
+		font-size 2.188rem
+		font-weight 400
+		line-height 2.563rem
+		text-align center
+	&__input-field
+		width 100%
+		margin-bottom 20px
+		padding-left 20px
+		background-color $c_white
+		border-radius 5px
+		border none
+		&_name,
+		&_mail
+			height rem(45px)
+			line-height rem(45px)
+		&_message
+			padding-top 16px
+			height 140px
+			resize none
+	&__controls
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		margin-right -20px
+		margin-left -20px
+	&__button
+		height 45px
+		width 190px
+		color $c_white
+		font-family $base-font
+		font-size 1rem
+		font-weight 500
+		line-height 45px
+		border none
+		&_submit
+			background-color $c_green
+		&_reset
+			background-color $c_green-hover

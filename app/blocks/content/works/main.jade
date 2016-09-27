@@ -1,0 +1,8 @@
+include /blocks/reviews/reviews
+include /blocks/works/works
+
+mixin main()
+	+b.MAIN.page-content(data-content='about')
+		+e.inner._works
+			+works
+			+reviews

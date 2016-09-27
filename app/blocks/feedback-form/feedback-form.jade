@@ -1,0 +1,13 @@
+mixin feedback-form()
+	+b.feedback-form&attributes(attributes)
+		+e.form(action='' method='' id='feedback')
+			+e.H3.title связаться со мной
+			+e.INPUT.input-field._name(type='text' name='name' id='userName' placeholder='Имя')
+			+e.INPUT.input-field._mail(type='email' name='mail' id='userMale' placeholder='Email')
+			+e.TEXTAREA.input-field._message(name='message' id='userMessage' placeholder='Ваше сообщение')
+			+e.controls
+				+e.BUTTON.button._submit(type='submit') Отправить
+				+e.BUTTON.button._reset(type='reset') Очистить
+			
+			
+			
