@@ -14,5 +14,5 @@ mixin header(obj)
 					+icon('hamburger', 40, 35)
 			+e(class='bottom-row_#{obj.modifier}').container
 				+author-photo
-				+e.B.page-title #{obj.title}
+				+e.B(class='page-title_#{obj.modifier}') #{obj.title}
 				+e.P.page-description #{obj.description}
