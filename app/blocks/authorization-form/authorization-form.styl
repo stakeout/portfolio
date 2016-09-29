@@ -1,0 +1,119 @@
+.authorization
+	width 23.75rem
+	min-height 24.688rem
+	margin auto
+	padding-top 35px
+	opacity 0.85
+	background-color #fcfcfc
+	border-radius 5px
+	text-align center
+	&__title
+		display block
+		margin-bottom 28px
+		color $c_grey
+		font-family $h-font
+		font-size 2.188rem
+		font-weight 400
+		line-height 2.563rem
+	&__label
+		position relative
+		display inline-block
+		vertical-align top
+		color $c_grey
+		font-family $base-font
+		font-size 1rem
+		font-weight 400
+		line-height 1.5rem
+		cursor pointer
+		&_login,
+		&_password
+			margin-bottom 20px
+			border 0.063rem solid #ccc
+			border-radius 5px
+			&:before
+				position absolute
+				content ''
+				left 0
+				width 45px
+				height 45px
+				background-color #f0efe9
+				border-radius 5px 0 0 5px
+		&_password
+			margin-bottom 16px
+		&_checkbox,
+		&_radio
+			padding-left 35px
+			&:before,
+			&:after
+				position absolute
+				content ''
+				left 0
+				width 21px
+				height 20px
+				background-color $c_white
+				border 0.063rem solid #ccc
+			&:after
+				display none
+		&_checkbox
+			margin-bottom 10px
+			&:before
+				border-radius 2px
+			&:after
+				top 2px
+				left 6px
+				width 6px
+				height 10px
+				border-left none
+				border-top none
+				background-color $c_green
+				border-right 3px solid $c_white
+				border-bottom 3px solid $c_white
+				transform rotate(45deg)
+		&_radio
+			&:before
+				border-radius 50%
+			&:after
+				left 7px
+				top 6px
+				width 8px
+				height 8px
+				background-color $c_green
+				border-radius 50%
+		&_ok
+			margin-right 30px
+	&__input-form
+		background-color $c_white
+		opacity 1
+		border none
+		&_login,
+		&_password
+			width 340px
+			height 45px
+			padding-left 65px
+			border-radius 5px
+		&_checkbox,
+		&_radio
+			display none
+		&_checkbox
+			&:checked + label:after
+				display block
+			&:checked + label:before
+				background-color $c_green
+				border none
+		&_radio
+			&:checked + label
+				color $c_green
+				opacity .8
+			&:checked + label:after
+				display block
+	&__ask-robot
+		display block
+		margin-bottom 7px
+		opacity 0.8
+		color $c_grey
+		font-family $base-font
+		font-size 1rem
+		font-weight 700
+		line-height 1.5rem
+	&__controls
+		margin-bottom 27px

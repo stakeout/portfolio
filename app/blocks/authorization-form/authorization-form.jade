@@ -1,0 +1,27 @@
+
+include /blocks/navigation/navigation
+mixin authorization-form()
+	+b.authorization&attributes(attributes)
+		+e.FORM.FORM(action='' method='')
+			+e.B.title Авторизуйтесь
+			+e.LABEL.label._login(for='login')
+				+e.INPUT.input-form._login(type='text' name='login' id='login' placeholder='Логин')
+			+e.LABEL.label._password(for='password')
+				+e.INPUT.input-form._password(type='password' name='password' id='password' placeholder='Пароль')
+			+e.controls
+				+e.INPUT.input-form._checkbox(type='checkbox' name='captcha' id='captcha' required)
+				+e.LABEL.label._checkbox(for='captcha') Я человек
+				+e.controls._radio
+					+e.B.ask-robot Вы точно не робот?
+					+e.INPUT.input-form._radio(type='radio' name='check' id='positive')
+					+e.LABEL.label._radio._ok(for='positive') Да
+					+e.INPUT.input-form._radio._no(type='radio' name='check' id='negative' checked)
+					+e.LABEL.label._radio(for='negative') Не уверен
+			//- +e.A.link.link(href='index.html') На главную
+			//- +e.BUTTON.submit(type='submit') Войти
+			+navigation({modifier:'auth',
+									menu:{'На главную':'index.html',
+												'Войти':'#'
+											}
+									})
+			

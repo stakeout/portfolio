@@ -3,14 +3,12 @@ mixin header(obj)
 	+b.HEADER(class='page-header_#{obj.modifier}')&attributes(attributes)
 		+e(class='inner_#{obj.modifier}')
 			+e(class='top-row_#{obj.modifier}').container
-				- var icons = ["vk","github","in"];
 				+socials({modifier:'header',
-									icons:icons,
 									name1:'vk',
 									name2:'github',
 									name3:'in'
 									})
-				+e.A(class='nav-toggler_#{obj.modifier}').nav-toggler-js(href='#')
+				+e.A(href='#' class='nav-toggler_#{obj.modifier}').nav-toggler-js
 					+icon('hamburger', 40, 35)
 			+e(class='bottom-row_#{obj.modifier}').container
 				+author-photo

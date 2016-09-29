@@ -1,10 +1,12 @@
 include /blocks/intro/intro
 include /blocks/copyright/copyright
+include /blocks/authorization-form/authorization-form
 mixin promo()
 	+b.promo&attributes(attributes)
 		+e.top-row
 			+e.A.authorization.btn(href='authorization.html') Авторизоваться
 		+e.middle-row.container
-			+intro
+			//- +intro
+			+authorization-form
 		+e.bottom-row.container
 			+copyright

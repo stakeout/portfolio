@@ -1,5 +1,4 @@
 mixin socials(obj)
-	- var icon = obj.icons || []
 	+b(class='socials_#{obj.modifier}')&attributes(attributes)
 		+e.UL(class='list_#{obj.modifier}')
 			+e.LI(class='item_#{obj.modifier}')
@@ -11,3 +10,4 @@ mixin socials(obj)
 			+e.LI(class='item_#{obj.modifier}')
 				+e.A.link._linkedin.link(href='') linkedin
 					+icon(obj.name3, 24, 22)
+//`
