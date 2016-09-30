@@ -13,4 +13,7 @@ mixin header(obj)
 			+e(class='bottom-row_#{obj.modifier}').container
 				+author-photo
 				+e.B(class='page-title_#{obj.modifier}') #{obj.title}
-				+e.P.page-description #{obj.description}
+				+e.P(class='page-description_#{obj.modifier}') #{obj.description}
+				if obj.modifier !== 'blog'
+					+e.arrow
+						+icon('arrow_down', 26, 16)
