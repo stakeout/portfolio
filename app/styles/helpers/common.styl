@@ -22,12 +22,12 @@
 
 .page
 	display: flex
-	min-height: 100vh
+	height 100vh
 	flex-direction: column
 	margin: 0 auto
 
 .page-content
-	flex: 1
+	flex:1 auto
 
 .container
 	width: $page-width
@@ -77,3 +77,22 @@
 
 .hidden
 	display none
+
+.wings
+	position relative
+	display inline-block
+	padding-left 40px
+	padding-right 40px
+	text-align center
+	&:after,
+	&:before
+		position absolute
+		top 50%
+		content ''
+		width 22px
+		height 5px
+		background-color rgba(0,0,0,.2)
+	&:before
+		left 0
+	&:after
+		right 0

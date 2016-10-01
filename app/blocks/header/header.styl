@@ -1,15 +1,15 @@
 .page-header
-	position relative
 	max-width rem(1200px)
+	width 100%
 	margin 0 auto
 	&__inner
-		background url(../images/header-bg-1200.jpg)
+		background url(../images/bg-1800.jpg)
 		background-repeat no-repeat
 		background-size cover
 		&_about,
 		&_works
 			position relative
-			min-height rem(620px)
+			min-height rem(600px)
 			&:before,
 			&:after
 				position absolute
@@ -19,7 +19,7 @@
 				width: 0;
 				height: 0;
 				border-style: solid;
-				border-width: 0 0 125px 700px;
+				border-width: 0 0 100px 610px;
 				border-color: transparent transparent #eeebdf transparent;
 			&:before
 				bottom 0
@@ -27,7 +27,7 @@
 				width: 0;
 				height: 0;
 				border-style: solid;
-				border-width: 125px 0 0 700px;
+				border-width: 100px 0 0 610px;
 				border-color: transparent transparent transparent #efeee9;
 		&_works
 			&:before
@@ -86,7 +86,9 @@
 		&_blog
 			margin-top 25px
 	&__bottom-row
+		position relative
 		text-align center
+		z-index 5
 	&__page-title
 		color $c_white
 		font-family $base-font
@@ -106,12 +108,14 @@
 		font-size 1rem
 		font-weight 400
 		line-height 1.5rem
+		opacity .8
 		&_blog
 			margin-bottom 0
 	&__arrow
-		z-index 5
+		display inline-block
+		vertical-align top
+		cursor pointer
 		opacity .7
-		cursor poiner
 		svg
 			fill $c_white
 		&:hover
