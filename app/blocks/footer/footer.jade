@@ -3,7 +3,7 @@ include /blocks/navigation/navigation
 include /blocks/copyright/copyright
 mixin footer()
 	+b.FOOTER.page-footer&attributes(attributes)
-		+e.inner.container
+		+e.inner
 			+e.top-row
 				+navigation({modifier:'footer',
 										menu:{'Мои работы':'works.html',
