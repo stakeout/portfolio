@@ -2,12 +2,12 @@ mixin socials(obj)
 	+b(class='socials_#{obj.modifier}')&attributes(attributes)
 		+e.UL(class='list_#{obj.modifier}')
 			+e.LI(class='item_#{obj.modifier}')
-				+e.A.link._vk.link(href='https://vk.com/id268045389') vkontact
+				+e.A.link._vk.link(href='https://vk.com/id268045389' target='_blank') vkontact
 					+icon(obj.name1, 31, 17)
 			+e.LI(class='item_#{obj.modifier}')
-				+e.A.link._github.link(href='https://github.com/stakeout') github
+				+e.A.link._github.link(href='https://github.com/stakeout' target='_blank') github
 					+icon(obj.name2, 26, 22)
 			+e.LI(class='item_#{obj.modifier}')
-				+e.A.link._linkedin.link(href='') linkedin
+				+e.A.link._linkedin.link(href='#' target='_blank') linkedin
 					+icon(obj.name3, 24, 22)
 //`
