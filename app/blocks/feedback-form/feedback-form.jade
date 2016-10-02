@@ -1,7 +1,7 @@
 mixin feedback-form()
 	+b.feedback-form&attributes(attributes)
 		+e.FORM.form(action='#' method='post' id='feedback')
-			+e.H3.title связаться со мной
+			+e.H3.title.wings связаться со мной
 			+e.INPUT.input-field._name(type='text' name='name' id='userName' placeholder='Имя')
 			+e.INPUT.input-field._mail(type='email' name='mail' id='userMale' placeholder='Email')
 			+e.TEXTAREA.input-field._message(name='message' id='userMessage' placeholder='Ваше сообщение')
