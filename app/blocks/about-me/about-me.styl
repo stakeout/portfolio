@@ -5,6 +5,8 @@
 	width 100%
 	min-height 855px
 	background #efeee9
+	@media $tablet
+		max-width initial
 	&:before
 		position absolute
 		content ''
@@ -35,6 +37,10 @@
 			transform translateX(40%)
 		@media (max-width: 1000px)
 			transform translateX(20%)
+		@media (max-width: 830px)
+			transform translateX(10%)
+		@media (max-width: 780px)
+			transform translateX(5%)
 		// @media (max-width: 1000px)
 		// 	margin-right 5px
 		// @media (max-width: 950px)
@@ -52,10 +58,15 @@
 			align-items center
 			max-width: initial
 			padding-top 0
+		// @media $tablet
+
 	&__img-wrapper
 		max-width 440px
 		margin-bottom 30px
 		padding-left 20px
+		@media (max-width: 930px)
+			padding-left 10px
+			padding-right 10px
 	&__title-description
 		margin-bottom 26px
 		color $c_grey

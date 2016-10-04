@@ -6,17 +6,35 @@
 	background url(../images/bg-1800.jpg)
 	background-repeat no-repeat
 	background-size cover
-	&_works,
 	&_about
+		min-height rem(600px)
+		&:after
+			position absolute
+			content ''
+			bottom 0
+			right 0
+			height 152px
+			width 50%
+			background url(../images/about_bg_right.svg) no-repeat
 		&:before
 			position absolute
-			width 65.277%
-			min-height 314px
-			top calc(50% - 157px)
-			left calc(50% - 32.638%)
 			content ''
-			background url(../images/portfolio_header.svg) no-repeat
-			opacity .1
+			bottom 0
+			left 0
+			right 0
+			height 152px
+			width 50%
+			background url(../images/about_bg_left.svg) no-repeat
+	&_works
+		min-height rem(600px)
+		&:after
+			position absolute
+			content ''
+			bottom 0
+			left 0
+			height 155px
+			width 100%
+			background url(../images/bg.svg) no-repeat
 	&_blog
 		&:before
 			position absolute
@@ -28,26 +46,17 @@
 			background url(../images/blog_header.svg) no-repeat
 			opacity .07
 	&__inner
-		&_about,
-		&_works
-			position relative
-			min-height rem(600px)
-			&:after
-				position absolute
-				content ''
-				bottom 0
-				right 0
-				height 175px
-				width 50%
-				background url(../images/about_bg_right.svg) no-repeat
+		&_works,
+		&_about
 			&:before
 				position absolute
+				width 65.277%
+				min-height 314px
+				top calc(50% - 157px)
+				left calc(50% - 32.638%)
 				content ''
-				bottom 0
-				left 0
-				height 175px
-				width 50%
-				background url(../images/about_bg_left.svg) no-repeat
+				background url(../images/portfolio_header.svg) no-repeat
+				opacity .1
 		&_blog
 			position relative
 			min-height 396px
@@ -101,6 +110,7 @@
 	&__bottom-row
 		position relative
 		text-align center
+		z-index 5
 	&__page-title
 		color $c_white
 		font-family $base-font
