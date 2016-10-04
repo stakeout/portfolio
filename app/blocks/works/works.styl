@@ -1,5 +1,16 @@
 .works
+	position relative
 	width 100%
+	&:before
+		position absolute
+		top 0
+		left calc(50% - 252px)
+		content ''
+		width 505px
+		height 165px
+		background url(../images/works_header.svg) no-repeat
+		opacity .07
+		z-index 1
 	&__inner
 		position relative
 		max-width rem($page-width)

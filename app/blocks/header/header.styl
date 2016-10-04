@@ -1,11 +1,33 @@
 .page-header
+	position relative
 	max-width rem(1800px)
 	width 100%
 	margin 0 auto
+	background url(../images/bg-1800.jpg)
+	background-repeat no-repeat
+	background-size cover
+	&_works,
+	&_about
+		&:before
+			position absolute
+			width 1175px
+			height 314px
+			top calc(50% - 157px)
+			left calc(50% - 587px)
+			content ''
+			background url(../images/portfolio_header.svg) no-repeat
+			opacity .06
+	&_blog
+		&:before
+			position absolute
+			content ''
+			width 303px
+			height 208px
+			left calc(50% - 150px)
+			bottom 0
+			background url(../images/blog_header.svg) no-repeat
+			opacity .07
 	&__inner
-		background url(../images/bg-1800.jpg)
-		background-repeat no-repeat
-		background-size cover
 		&_about,
 		&_works
 			position relative
@@ -36,7 +58,6 @@
 				border-color: transparent transparent #faf8f0 transparent;
 		&_blog
 			position relative
-			margin-bottom 65px
 			min-height 396px
 			&:before,
 			&:after
