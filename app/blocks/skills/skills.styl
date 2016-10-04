@@ -20,7 +20,9 @@
 		padding-left 40px
 		padding-right 10px
 		@media (max-width: 1470px)
-			padding-right 0
+			padding-left 20px
+		@media (max-width: 1160px)
+			padding-left 10px
 	&__description-text
 		margin-bottom 48px
 		color $c_grey
@@ -37,12 +39,26 @@
 		line-height 2rem
 	&__skill-section
 		margin-bottom 40px
+		@media (max-width: 965px)
+			margin-bottom 15px
 	&__list
 		display -webkit-flex
 		display -ms-flex
 		display flex
+		@media (max-width: 965px)
+			flex-wrap wrap
 	&__item
+		width 110px
+		height 110px
 		margin-right 37px
 		border-radius 50%
+		background-color #ccc
+		@media (max-width: 1180px)
+			margin-right 10px
+		@media (max-width: 1000px)
+			margin-right 5px
+		@media (max-width: 965px)
+			margin-right 20px
+			margin-bottom 10px
 		&:last-child
 			margin-right 0
