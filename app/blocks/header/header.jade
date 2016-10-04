@@ -1,5 +1,6 @@
 include /blocks/author-photo/author-photo
 mixin header(obj)
+	- var mod = 'obj.modifier'
 	+b.HEADER(class='page-header_#{obj.modifier}')
 		+e(class='inner_#{obj.modifier}')
 			if obj.modifier === 'blog'
@@ -12,8 +13,8 @@ mixin header(obj)
 					+e.A(href='#' class='nav-toggler_#{obj.modifier}').nav-toggler-js
 						+icon('hamburger', 40, 35)
 				+e(class='bottom-row_#{obj.modifier}').container
-					+author-photo._`obj.modifier`
-					+e.B(class='page-title_#{obj.modifier}') #{obj.title}
+					+author-photo
+					+e.H1(class='page-title_#{obj.modifier}') #{obj.title}
 					+e.P(class='page-description_#{obj.modifier}') #{obj.description}
 			else
 				+e(class='top-row_#{obj.modifier}')

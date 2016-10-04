@@ -4,10 +4,11 @@ mixin works()
 			+e.H2.title.wings мои работы
 			+e.works-wrapper
 				+e.left-column
-					h3.wings.wings_top сайт школы онлайн
-						br 
-						|образования
-					+e.P.technology html, css, javascript
+					h3.wings.wings_top сайт школы онлайн образования
+					+b.UL.technology 
+						+e.Li.item html
+						+e.Li.item css
+						+e.Li.item javascript
 					+e.A.go-to-site.link.btn(href='#') Посмотреть сайт
 				+e.right-column
 					+e.presentation
