@@ -12,19 +12,11 @@
 			position absolute
 			content ''
 			bottom 0
-			right 0
-			height 152px
-			width 50%
-			background url(../images/about_bg_right.svg) no-repeat
-		&:before
-			position absolute
-			content ''
-			bottom 0
 			left 0
 			right 0
 			height 152px
-			width 50%
-			background url(../images/about_bg_left.svg) no-repeat
+			width 100%
+			background url(../images/about-svg-triangle-bg.svg) no-repeat
 	&_works
 		min-height rem(600px)
 		&:after
@@ -34,12 +26,12 @@
 			left 0
 			height 155px
 			width 100%
-			background url(../images/bg.svg) no-repeat
+			background url(../images/works-svg-triangle-bg.svg) no-repeat
 	&_blog
 		&:before
 			position absolute
 			content ''
-			max-width rem(303px)
+			width rem(303px)
 			height 208px
 			left calc(50% - 150px)
 			bottom 0
@@ -60,26 +52,13 @@
 		&_blog
 			position relative
 			min-height 396px
-			&:before,
 			&:after
 				position absolute
 				content ''
 				bottom 0
-			&:after
-				right 0
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 0 0 152px 888px;
-				border-color: transparent transparent $c_white transparent;
-			&:before
-				left 0
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 152px 0 0 888px;
-				border-color: transparent transparent transparent $c_white;
-
+				height 155px
+				width 100%
+				background url(../images/blog-svg-triangle-bg.svg) no-repeat
 	&__top-row
 		display -webkit-flex
 		display -ms-flex
@@ -145,3 +124,4 @@
 			fill $c_white
 		&:hover
 			opacity 1
+// .svg-bottom-bg-about
