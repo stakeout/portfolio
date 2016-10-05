@@ -1,7 +1,6 @@
-
 include /blocks/navigation/navigation
 mixin authorization-form()
-	+b.authorization&attributes(attributes)
+	+b.authorization.hide&attributes(attributes)
 		+e.FORM.FORM(action='' method='')
 			+e.B.title Авторизуйтесь
 			+e.LABEL.label._login(for='login')
@@ -17,11 +16,6 @@ mixin authorization-form()
 					+e.LABEL.label._radio._ok(for='positive') Да
 					+e.INPUT.input-form._radio._no(type='radio' name='check' id='negative' checked)
 					+e.LABEL.label._radio(for='negative') Не уверен
-			//- +e.A.link.link(href='index.html') На главную
-			//- +e.BUTTON.submit(type='submit') Войти
-			+navigation({modifier:'auth',
-									menu:{'На главную':'index.html',
-												'Войти':'#'
-											}
-									})
+			+e.A.link.link.btn(href='index.html' id='authorizationReturn') На главную
+			+e.BUTTON.submit.btn#autorizationSubmit(type='submit') Войти
 			

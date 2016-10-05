@@ -1,12 +1,13 @@
 .authorization
-	width 23.75rem
-	min-height 24.688rem
+	width rem(380px)
+	min-height rem(406px)
 	margin auto
 	padding-top 35px
 	opacity 0.85
 	background-color #fcfcfc
 	border-radius 5px
 	text-align center
+	font-size 0
 	&__title
 		display block
 		margin-bottom 28px
@@ -116,4 +117,21 @@
 		font-weight 700
 		line-height 1.5rem
 	&__controls
-		margin-bottom 27px
+		margin-bottom 38px
+	&__link,
+	&__submit
+		width 50%
+		min-height rem(45px)
+		color $c_white
+		font-family $base-font
+		font-size 1rem
+		font-weight 500
+		line-height rem(45px)
+		background-color $c_green
+		&:hover
+			background-color $c_green-hover
+	&__link
+		border-radius 0 0 0 5px
+		border-right 2px solid rgba(222,227,231,.5)
+	&__submit
+		border-radius 0 0 5px 0

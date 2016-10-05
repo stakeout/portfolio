@@ -4,9 +4,9 @@ include /blocks/authorization-form/authorization-form
 mixin promo()
 	+b.promo&attributes(attributes)
 		+e.top-row
-			+e.A.authorization.btn(href='authorization.html') Авторизоваться
+			+e.A.authorization.btn#authorization(href='authorization.html') Авторизоваться
 		+e.middle-row.container
 			+intro
-			//- +authorization-form
+			+authorization-form
 		+e.bottom-row.container
 			+copyright
