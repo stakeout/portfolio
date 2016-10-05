@@ -8,8 +8,9 @@
 	width 100%
 	padding-top 12px
 	background-color #eeebdf
-	@media (max-width: 768px)
+	@media mqTablet
 		max-width initial
+		padding-top 40px
 	&__title
 		max-width rem(330px)
 		margin-bottom 27px
@@ -25,6 +26,13 @@
 			padding-left 20px
 		@media (max-width: 1160px)
 			padding-left 10px
+		@media mqTablet
+			display -webkit-flex
+			display -ms-flex
+			display flex
+			flex-direction column
+			justify-content center
+			align-items center
 	&__description-text
 		margin-bottom 48px
 		color $c_grey
@@ -32,6 +40,8 @@
 		font-size 1rem
 		font-weight 400
 		line-height 1.5rem
+		@media mqTablet
+			max-width 472px
 	&__skill-title
 		margin-bottom 14px
 		color $c_grey
@@ -39,6 +49,8 @@
 		font-size 1.75rem
 		font-weight 500
 		line-height 2rem
+		@media mqTablet
+			text-align center
 	&__skill-section
 		margin-bottom 40px
 		@media (max-width: 965px)

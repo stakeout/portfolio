@@ -1,12 +1,21 @@
-$mobile = 480px
-$tablet = 768px
-$laptop = 1200px
+smartphoneWidth = 480px
+tabletWidth     = 768px
 
-
-
+mqSmartphone = "only screen and (max-width: " + smartphoneWidth + ")"
+mqTablet     = "only screen and (max-width: " + tabletWidth     + ")"
 mobile()
   @media screen and (max-width: $mobile)
     {block}
 tablet()
   @media screen and (max-width: $tablet)
+    {block}
+
+widerthan(var)
+  condition = 'screen and (min-width: %s)' % var
+  @media condition
+    {block}
+
+max(var)
+  condition = 'screen and (max-width: %s)' % var
+  @media condition
     {block}

@@ -4,8 +4,12 @@
 	margin 0 auto
 	background url(../images/map-1800.jpg) no-repeat
 	background-size cover
+	@media mqTablet
+		min-height rem(650px)
 	&__inner
 		display -webkit-flex
 		display -ms-flex
 		display flex
 		padding-top 345px
+		@media mqTablet
+			padding-top 175px
