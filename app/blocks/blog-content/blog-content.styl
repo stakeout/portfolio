@@ -1,12 +1,19 @@
 .blog-content
 	max-width 55%
 	padding-top 65px
-	// @media (max-width: 1410px)
+	@media mqTablet
+		max-width: initial
+		padding-left 24px
+		padding-right 24px
+		padding-top 55px
 
 	&__article
 		position relative
 		padding-bottom 70px
 		margin-bottom 63px
+		@media mqTablet
+			padding-bottom 50px
+			margin-bottom 48px
 		&:after
 			position absolute
 			left 0
@@ -24,6 +31,9 @@
 		font-weight 400
 		line-height 2.563rem
 		text-transform uppercase
+		@media mqTablet
+			font-size 1.875rem
+			line-height 2.25rem
 	&__post-date
 		margin-bottom 27px
 		opacity 0.7
@@ -32,6 +42,9 @@
 		font-size 1rem
 		font-weight 400
 		line-height 2.563rem
+		@media mqTablet
+			font-size 0.875rem
+			line-height 1.5rem
 	p
 		max-width rem(900px)
 		padding-right 10px
@@ -40,3 +53,7 @@
 		font-size 1rem
 		font-weight 400
 		line-height 1.625rem
+		margin-bottom 5px
+		@media mqTablet
+			font-size 0.875rem
+			line-height 1.313rem

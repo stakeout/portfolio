@@ -1,35 +1,34 @@
 include /blocks/author-photo/author-photo
 mixin header(obj)
-	- var mod = 'obj.modifier'
 	+b.HEADER(class='page-header_#{obj.modifier}')
 		+e(class='inner_#{obj.modifier}')
-			if obj.modifier === 'blog'
-				+e(class='top-row_#{obj.modifier}').container
-					+socials({modifier:'header',
-										name1:'vk',
-										name2:'github',
-										name3:'in'
-										})
-					+e.A(href='#' class='nav-toggler_#{obj.modifier}').nav-toggler-js
-						+icon('hamburger', 40, 35)
-				+e(class='bottom-row_#{obj.modifier}').container
-					+author-photo
-					+e.H1(class='page-title_#{obj.modifier}') #{obj.title}
-					+e.P(class='page-description_#{obj.modifier}') #{obj.description}
-			else
-				+e(class='inner_#{obj.modifier}')
-					+e(class='top-row_#{obj.modifier}')
-						+socials({modifier:'header',
-											name1:'vk',
-											name2:'github',
-											name3:'in'
-											})
-						+e.A(href='#' class='nav-toggler_#{obj.modifier}').nav-toggler-js
-							+icon('hamburger', 40, 35)
-					+e(class='bottom-row_#{obj.modifier}').container
-						+author-photo
-						+e.H1(class='page-title_#{obj.modifier}') #{obj.title}
-						+e.P(class='page-description_#{obj.modifier}') #{obj.description}
-						if obj.modifier !== 'blog'
-							+e.arrow
-								+icon('arrow_down', 26, 16)
+			+e(class='top-row_#{obj.modifier}').container
+				+socials({modifier:'header',
+									name1:'vk',
+									name2:'github',
+									name3:'in'
+									})
+				+e.A(href='#' class='nav-toggler_#{obj.modifier}').nav-toggler-js
+					+icon('hamburger', 40, 35)
+			+e(class='bottom-row_#{obj.modifier}').container
+				+author-photo
+				+e.H1(class='page-title_#{obj.modifier}') #{obj.title}
+				+e.P(class='page-description_#{obj.modifier}') #{obj.description}
+				+e.arrow.arrow
+					+icon('arrow_down', 26, 16)
+			//- else
+			//- 	+e(class='inner_#{obj.modifier}')
+			//- 		+e(class='top-row_#{obj.modifier}')
+			//- 			+socials({modifier:'header',
+			//- 								name1:'vk',
+			//- 								name2:'github',
+			//- 								name3:'in'
+			//- 								})
+			//- 			+e.A(href='#' class='nav-toggler_#{obj.modifier}').nav-toggler-js
+			//- 				+icon('hamburger', 40, 35)
+			//- 		+e(class='bottom-row_#{obj.modifier}').container
+			//- 			+author-photo
+			//- 			+e.H1(class='page-title_#{obj.modifier}') #{obj.title}
+			//- 			+e.P(class='page-description_#{obj.modifier}') #{obj.description}
+			//- 			+e.arrow
+			//- 				+icon('arrow_down', 26, 16)
