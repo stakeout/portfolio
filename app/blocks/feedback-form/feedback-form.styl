@@ -1,5 +1,5 @@
 .feedback-form
-	width rem(380px)
+	max-width rem(380px)
 	min-height rem(438px)
 	margin 0 auto
 	padding-top 42px
@@ -22,6 +22,9 @@
 		@media mqTablet
 			font-size 1.875rem
 			line-height 2.563rem
+		@media mqSmartphone
+			font-size 1.313rem
+			line-height 1.75rem
 	&__input-field
 		width 100%
 		margin-bottom 20px
@@ -44,7 +47,7 @@
 		margin-right -20px
 		margin-left -20px
 	&__button
-		height 45px
+		min-height 45px
 		width 50%
 		color $c_white
 		font-family $base-font
@@ -53,6 +56,10 @@
 		line-height 45px
 		border none
 		background-color $c_green
+		@media mqSmartphone
+			min-height 46px
+			font-size 0.875rem
+			line-height 2.25rem
 		&:hover
 			background-color $c_green-hover
 		&_submit

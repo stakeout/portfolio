@@ -9,13 +9,17 @@
 		width 505px
 		height 165px
 		background url(../images/works_header.svg) no-repeat
-		background-size cover
+		background-size 100% 100%
 		opacity .07
 		z-index 1
 		@media mqTablet
 			width 404px
 			height 132px
 			left calc(50% - 202px)
+		@media mqSmartphone
+			width 253px
+			height 83px
+			left calc(50% - 125px)
 	&__inner
 		position relative
 		max-width rem($page-width)
@@ -24,6 +28,8 @@
 		padding-top 65px
 		background-color #faf8f0
 		text-align center
+		@media mqSmartphone
+			padding-top 25px
 	&__title
 		margin-bottom 70px
 		color $c_grey-hover
@@ -35,6 +41,9 @@
 		@media mqTablet
 			font-size 3.063rem
 			line-height 3rem
+		@media mqSmartphone
+			font-size 2.188rem
+			line-height 2.625rem
 	&__works-wrapper
 		margin-right -10px
 		margin-left -10px

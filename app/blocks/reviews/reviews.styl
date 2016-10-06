@@ -15,12 +15,22 @@
 		left calc(50% - 249px)
 		top 20px
 		background url(../images/about_header.svg) no-repeat
+		background-size 498px 175px
 		opacity .06
+		@media mqSmartphone
+			left calc(15%)
+			height 249px
+			height 88px
+			background-size 249px 88px
 	&__inner
 		padding-top 60px
 		@media mqTablet
 			padding-top 50px
 			padding-left 20px
+		@media mqSmartphone
+			padding-top 40px
+			padding-left 10px
+			padding-right 10px
 	&__title
 		max-width rem(400px)
 		margin-bottom rem(110px)
@@ -33,6 +43,10 @@
 		@media mqTablet
 			font-size 3.63rem
 			line-height 3.25rem
+		@media mqSmartphone
+			margin-bottom 25px
+			font-size 2.188rem
+			line-height 2.625rem
 	&__list
 		display -webkit-flex
 		display -ms-flex
@@ -41,8 +55,10 @@
 		margin 0 auto
 		margin-bottom 50px
 		text-align initial
+		@media mqSmartphone
+			display block
 	&__item
-		width rem(380px)
+		max-width rem(380px)
 		margin-right 20px
 		&:last-child
 			margin-right 0
