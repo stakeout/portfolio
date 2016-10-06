@@ -21,9 +21,11 @@
 			height 152px
 			width 100%
 			background url(../images/about-svg-triangle-bg.svg) no-repeat
+			background-size 100% 100%
 			@media mqTablet
 				height 70px
 				background url(../images/about-svg-triangle-bg-768.svg) no-repeat
+				background-size 100% 100%
 	&_works
 		min-height rem(600px)
 		@media mqTablet
@@ -38,6 +40,7 @@
 			height 155px
 			width 100%
 			background url(../images/works-svg-triangle-bg.svg) no-repeat
+			background-size 100% 100%
 			@media mqTablet
 				height rem(70px)
 	&_blog
@@ -80,6 +83,7 @@
 				height 155px
 				width 100%
 				background url(../images/blog-svg-triangle-bg.svg) no-repeat
+				background-size 100% 100%
 				@media mqTablet
 					height 70px
 	&__top-row
@@ -149,3 +153,10 @@
 		&:hover
 			opacity 1
 // .svg-bottom-bg-about
+.bg-wrapper
+	position absolute
+	left 0
+	bottom 5px
+	height 155px
+	width 100%
+	// background url(../images/blog-svg-triangle-bg.svg) no-repeat
