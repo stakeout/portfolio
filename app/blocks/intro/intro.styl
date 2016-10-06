@@ -1,11 +1,13 @@
 .intro
-	width 23.75rem
+	max-width 23.75rem
 	min-height 24.688rem
 	margin auto
 	background-color #fcfcfc
 	opacity .85
 	text-align center
 	border-radius 5px
+	@media mqSmartphone
+		min-height rem(385px)
 	&__inner
 		padding-top 37px
 	&__name
@@ -15,6 +17,9 @@
 		font-weight 500
 		line-height 2.125rem
 		color $c_grey
+		@media mqSmartphone
+			font-size 1.313rem
+			line-height 1.75rem
 	&__description
 		margin-bottom 35px
 		font-family $base-font
@@ -22,3 +27,7 @@
 		font-weight 400
 		opacity 0.8
 		color $c_grey
+		@media mqSmartphone
+			margin-bottom 20px
+			font-size 0.875rem
+			line-height 1.5rem

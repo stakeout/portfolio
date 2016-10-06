@@ -7,6 +7,8 @@
 	background #efeee9
 	@media (max-width: 768px)
 		max-width initial
+	@media mqSmartphone
+		min-height rem(725px)
 	&:before
 		position absolute
 		content ''
@@ -15,7 +17,7 @@
 		width 357px
 		height 125px
 		background url(../images/about_header.svg) no-repeat 10%
-		background-size contain
+		background-size 100% 100%
 		opacity .06
 		z-index 1
 		@media (max-width: 1625px)
@@ -33,6 +35,11 @@
 			left calc(50% - 124px)
 			width 249px
 			height 88px
+		@media mqSmartphone
+			top 0
+			width 199px
+			height 70px
+			left (20%)
 	&__title
 		float left
 		width 300px
@@ -60,6 +67,11 @@
 			font-size 3.063rem
 			line-height 3rem
 			margin-left 30%
+		@media mqSmartphone
+			margin-left 0
+			margin-bottom 40px
+			font-size 2.188rem
+			line-height 2.625rem
 	&__inner
 		float right
 		max-width 53%
@@ -74,8 +86,6 @@
 			align-items center
 			max-width: initial
 			padding-top 0
-		// @media $tablet
-
 	&__img-wrapper
 		max-width 450px
 		min-height 390px
@@ -89,6 +99,10 @@
 			padding-right 0
 			max-width 472px
 			min-height 415px
+		@media mqSmartphone
+			min-height 275px
+			max-width 100%
+			margin-bottom 30px
 	&__title-description
 		margin-bottom 26px
 		color $c_grey
@@ -99,6 +113,10 @@
 		@media mqTablet
 			font-size 1.875rem
 			line-height 2.25rem
+		@media mqSmartphone
+			margin-bottom 18px
+			font-size 1.313rem
+			line-height 1.75rem
 	&__description-text
 		margin-bottom 11px
 		padding-left 20px
@@ -112,3 +130,6 @@
 			max-width 440px
 		@media mqTablet
 			max-width 472px
+		@media mqSmartphone
+			padding-left 10px
+			padding-right 10px

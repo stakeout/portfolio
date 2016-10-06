@@ -1,10 +1,15 @@
 .contacts
-	width rem(380px)
-	height rem(290px)
+	max-width rem(380px)
+	width 100%
+	min-height rem(290px)
 	margin auto
 	opacity 0.85
 	background-color #fcfcfc
 	border-radius 5px
+	@media mqSmartphone
+		min-height 255px
+	@media mqSmartphone
+		opacity 1
 	&__inner
 		padding-top 35px
 		text-align center
@@ -19,6 +24,8 @@
 	&__list
 		margin-left 40px
 		text-align initial
+		@media mqSmartphone
+			margin-left 10px
 	&__item
 		margin-bottom 27px
 	&__link

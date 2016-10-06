@@ -3,7 +3,9 @@ mixin about-me()
 		+e.H2.title.wings Обо мне
 		+e.inner
 			+e.img-wrapper
-				img.image(src="http://placehold.it/450x390", alt="Это я")
+				picture
+					source(media="(max-width: 320px)" srcset="http://placehold.it/320x275")
+					img.image(src="http://placehold.it/450x390", alt="Это я")
 			+e.B.title-description.wings Кто я
 			+e.P.description-text Я веб разработчик из Новосибирска. Мне 35 лет.  Я занимаюсь разработкой современных сайтов и приложений.
 				| Мне нравится делать интересные

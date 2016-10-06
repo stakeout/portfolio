@@ -5,7 +5,7 @@
 	flex-direction column
 	min-height 100vh
 	background url(../images/bg-1800.jpg) no-repeat
-	background-size cover
+	background-size 100% 100%
 	&__top-row
 		display -webkit-flex
 		display -ms-flex
@@ -16,6 +16,9 @@
 		display -ms-flex
 		display flex
 		flex 1
+		@media mqSmartphone
+			padding-left 5px
+			padding-right 5px
 	&__authorization
 		margin-left auto
 		margin-top 20px
@@ -29,6 +32,12 @@
 		border 0.063rem solid $c_white
 		border-radius 5px
 		text-decoration none
+		@media mqSmartphone
+			min-height 40px
+			font-size 0.875rem
+			line-height 40px
+			margin auto
+			margin-top 10px
 		&:hover
 			color $c_green
 			font-weight 500

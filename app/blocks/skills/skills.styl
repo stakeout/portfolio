@@ -11,6 +11,8 @@
 	@media mqTablet
 		max-width initial
 		padding-top 40px
+	@media mqSmartphone
+		padding-top 1rem
 	&__title
 		max-width rem(330px)
 		margin-bottom 27px
@@ -22,6 +24,11 @@
 		@media mqTablet
 			font-size 1.875rem
 			line-height 2.25rem
+		@media mqSmartphone
+			max-width rem(300px)
+			margin-bottom 20px
+			font-size 1.313rem
+			line-height 1.75rem
 	&__inner
 		padding-left 40px
 		padding-right 10px
@@ -45,6 +52,9 @@
 		line-height 1.5rem
 		@media mqTablet
 			max-width 472px
+		@media mqSmartphone
+			max-width 100%
+			margin-bottom 28px
 	&__skill-title
 		margin-bottom 14px
 		color $c_grey
@@ -66,6 +76,8 @@
 		display flex
 		@media (max-width: 965px)
 			flex-wrap wrap
+		@media mqSmartphone
+			justify-content: center;
 	&__item
 		width 110px
 		height 110px
