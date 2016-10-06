@@ -6,7 +6,10 @@
 		padding-left 24px
 		padding-right 24px
 		padding-top 55px
-
+	@media mqSmartphone
+		padding-top 35px
+		padding-left 12px
+		padding-right 12px
 	&__article
 		position relative
 		padding-bottom 70px
@@ -19,10 +22,12 @@
 			left 0
 			bottom 0
 			content ''
-			width 42.563rem
+			width 70%
 			height 0.313rem
 			opacity 0.07
 			background-color $c_grey-hover
+			@media (max-width: 1060px)
+				width 100%
 	&__post-title
 		// margin-bottom 30px
 		color $c_grey
@@ -34,6 +39,9 @@
 		@media mqTablet
 			font-size 1.875rem
 			line-height 2.25rem
+		@media mqSmartphone
+			font-size 1.313rem
+			line-height 1.75rem
 	&__post-date
 		margin-bottom 27px
 		opacity 0.7

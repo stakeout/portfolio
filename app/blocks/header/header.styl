@@ -44,6 +44,12 @@
 			@media mqTablet
 				height rem(70px)
 	&_blog
+		position relative
+		min-height rem(396px)
+		@media mqTablet
+			min-height rem(508px)
+		@media mqSmartphone
+			min-height rem(558px)
 		&:before
 			position absolute
 			content ''
@@ -52,11 +58,31 @@
 			left calc(50% - 150px)
 			top calc(40%)
 			background url(../images/blog_header.svg) no-repeat
+			background-size 303px 208px
 			opacity .07
 			@media mqTablet
 				width 242px
 				height 166px
 				top calc(40%)
+			@media mqSmartphone
+				width 152px
+				height 104px
+				left calc(50% - 76px)
+				top calc(45%)
+				background-size 152px 104px
+
+		&:after
+			position absolute
+			content ''
+			bottom 0
+			height 155px
+			width 100%
+			background url(../images/blog-svg-triangle-bg.svg) no-repeat
+			background-size 100% 100%
+			@media mqTablet
+				height 70px
+			@media mqSmartphone
+				height 40px
 	&__inner
 		&_works,
 		&_about
@@ -71,21 +97,6 @@
 				opacity .1
 				@media mqTablet
 					display none
-		&_blog
-			position relative
-			min-height rem(396px)
-			@media mqTablet
-				min-height rem(508px)
-			&:after
-				position absolute
-				content ''
-				bottom 0
-				height 155px
-				width 100%
-				background url(../images/blog-svg-triangle-bg.svg) no-repeat
-				background-size 100% 100%
-				@media mqTablet
-					height 70px
 	&__top-row
 		display -webkit-flex
 		display -ms-flex
@@ -127,6 +138,8 @@
 		font-size 2.188rem
 		font-weight 500
 		// line-height 3.5rem
+		@media mqSmartphone
+			line-height 2.625rem
 		&_blog
 			color $c_white
 			font-family $h-font
@@ -143,6 +156,10 @@
 		opacity .8
 		@media (max-width: 1180px)
 			margin-bottom 70px
+		@media mqSmartphone
+			margin-bottom 150px
+			font-size 0.875rem
+			line-height 1.5rem
 	&__arrow
 		display inline-block
 		vertical-align top
