@@ -29,7 +29,10 @@
 		@media (max-width: 800px)
 			left 5%
 		@media mqTablet
-			left calc(50% - 175px)
+			top -5px
+			left calc(50% - 124px)
+			width 249px
+			height 88px
 	&__title
 		float left
 		width 300px
@@ -54,6 +57,8 @@
 		@media (max-width: 800px)
 			transform translateX(2%)
 		@media mqTablet
+			font-size 3.063rem
+			line-height 3rem
 			margin-left 30%
 	&__inner
 		float right
@@ -79,6 +84,11 @@
 		@media (max-width: 930px)
 			padding-left 10px
 			padding-right 10px
+		@media mqTablet
+			padding-left 0
+			padding-right 0
+			max-width 472px
+			min-height 415px
 	&__title-description
 		margin-bottom 26px
 		color $c_grey
@@ -86,6 +96,9 @@
 		font-size 2.188rem
 		font-weight 400
 		line-height 2.563rem
+		@media mqTablet
+			font-size 1.875rem
+			line-height 2.25rem
 	&__description-text
 		margin-bottom 11px
 		padding-left 20px
@@ -97,3 +110,5 @@
 		text-align left
 		@media (max-width: 1470px)
 			max-width 440px
+		@media mqTablet
+			max-width 472px

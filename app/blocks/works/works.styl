@@ -9,8 +9,13 @@
 		width 505px
 		height 165px
 		background url(../images/works_header.svg) no-repeat
+		background-size cover
 		opacity .07
 		z-index 1
+		@media mqTablet
+			width 404px
+			height 132px
+			left calc(50% - 202px)
 	&__inner
 		position relative
 		max-width rem($page-width)
@@ -27,68 +32,34 @@
 		font-weight 400
 		line-height 3.5rem
 		text-align center
+		@media mqTablet
+			font-size 3.063rem
+			line-height 3rem
 	&__works-wrapper
-		display -webkit-flex
-		display -ms-flex
-		display flex
 		margin-right -10px
 		margin-left -10px
 		min-height rem(745px)
 		background-color #efebe0
-	&__left-column
-		display -webkit-flex
-		display -ms-flex
-		display flex
-		flex-direction column
-		-webkit-box-pack: center;
-		-moz-box-pack: center;
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-		align-items center
+		clearfix()
+		@media mqTablet
+			display -webkit-flex
+			display -ms-flex
+			display flex
+			flex-direction column
+			min-height rem(1015px)
+	&__controls
+		float right
 		width 50%
-		padding-left 10px
-		background-color #f0efe9
-		h3
-			max-width 350px
-			margin-bottom 35px
-			color $c_grey
-			font-family $h-font
-			font-size 2.188rem
-			font-weight 400
-			line-height 2.563rem
-			text-align center
-	&__go-to-site
-		width 200px
-		min-height 45px
-		color $c_white
-		font-family $base-font
-		font-size 1rem
-		font-weight 500
-		line-height 45px
-		text-align center
-		background-color $c_green
-		border-radius 5px
-		&:hover
-			background-color $c_green-hover
-	&__right-column
+		min-height rem(230px)
+		@media mqTablet
+			float none
+			order 3
+			min-height rem(215px)
+	&__presentation
+		float right
+		min-height rem(515px)
 		width 50%
-		padding-right 10px
-.technology
-	display -webkit-flex
-	display -ms-flex
-	display flex
-	justify-content center
-	min-width rem(420px)
-	margin-bottom 40px
-	margin-top -10px
-	padding-top 18px
-	padding-bottom 18px
-	color $c_green
-	font-family $base-font
-	font-size 1rem
-	font-weight 500
-	text-transform uppercase
-	text-align center
-	border-top 1px solid rgba(16,156,142,.3)
-	border-bottom 1px solid rgba(16,156,142,.3)
+		@media mqTablet
+			float none
+			width 100%
+			min-height rem(530px)

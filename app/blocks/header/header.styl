@@ -8,6 +8,10 @@
 	background-size cover
 	&_about
 		min-height rem(600px)
+		@media mqTablet
+			min-height rem(508px)
+		@media mqSmartphone
+			min-height rem(558px)
 		&:after
 			position absolute
 			content ''
@@ -17,8 +21,15 @@
 			height 152px
 			width 100%
 			background url(../images/about-svg-triangle-bg.svg) no-repeat
+			@media mqTablet
+				height 70px
+				background url(../images/about-svg-triangle-bg-768.svg) no-repeat
 	&_works
 		min-height rem(600px)
+		@media mqTablet
+			min-height rem(508px)
+		@media mqSmartphone
+			min-height rem(558px)
 		&:after
 			position absolute
 			content ''
@@ -27,6 +38,8 @@
 			height 155px
 			width 100%
 			background url(../images/works-svg-triangle-bg.svg) no-repeat
+			@media mqTablet
+				height rem(70px)
 	&_blog
 		&:before
 			position absolute
@@ -49,6 +62,8 @@
 				content ''
 				background url(../images/portfolio_header.svg) no-repeat
 				opacity .1
+				@media mqTablet
+					display none
 		&_blog
 			position relative
 			min-height 396px
