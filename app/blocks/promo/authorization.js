@@ -1,36 +1,19 @@
 export default () => {
-	const auth = document.getElementById('authorization');
+	const authBtn = document.getElementById('authorization');
 	const authReturn = document.getElementById('authorizationReturn');
-	const welcomForm = document.querySelector('.intro');
-	const authForm = document.querySelector('.authorization');
+	const flipper = document.querySelector('.flipper__inner');
 	function showAuthorizationForm(e) {
 		e.preventDefault();
-		welcomForm.style.transform = 'scaleX(0)';
-		setTimeout(() => {
-			welcomForm.classList.remove('show');
-			welcomForm.classList.add('hide');
-			authForm.classList.remove('hide');
-			authForm.classList.add('show');
-			setTimeout(() => {
-				authForm.style.transform = 'scaleX(1)';
-			}, 15);
-		}, 500);
+		authBtn.style.visibility = 'hidden';
+		flipper.style.transform = 'rotateY(180deg)';
 	}
 	function showWelcomForm(e) {
 		e.preventDefault();
-		authForm.style.transform = 'scaleX(0)';
-		setTimeout(() => {
-			authForm.classList.remove('show');
-			authForm.classList.add('hide');
-			welcomForm.classList.remove('hide');
-			welcomForm.classList.add('show');
-			setTimeout(() => {
-				welcomForm.style.transform = 'scaleX(1)';
-			}, 15);
-		}, 500);
+		authBtn.style.visibility = 'visible';
+		flipper.style.transform = 'rotateY(0)';
 	}
-	if (auth || authReturn) {
-		auth.addEventListener('click', showAuthorizationForm);
+	if (authBtn || authReturn) {
+		authBtn.addEventListener('click', showAuthorizationForm);
 		authReturn.addEventListener('click', showWelcomForm);
 	}
 };

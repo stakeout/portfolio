@@ -15,6 +15,11 @@
 		max-width rem(270px)
 	&__item
 		margin-bottom 27px
+		&_active
+			border-right 3px solid $c_green
+			& > a
+				color $c_green
+				font-weight 700
 	&__link
 		min-height 42px
 		padding-right 17px
@@ -27,3 +32,6 @@
 			color $c_green
 			font-weight 700
 			border-right 3px solid $c_green
+.blog-nav-fixed
+	position fixed
+	top 20px

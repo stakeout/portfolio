@@ -1,6 +1,6 @@
 include /blocks/navigation/navigation
 mixin authorization-form()
-	+b.authorization.hide&attributes(attributes)
+	+b.authorization&attributes(attributes)
 		+e.FORM.FORM(action='' method='')
 			+e.B.title Авторизуйтесь
 			+e.LABEL.label._login(for='login')

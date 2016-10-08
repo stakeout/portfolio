@@ -1,6 +1,6 @@
 mixin blog-content()
 	+b.blog-content&attributes(attributes)
-		+e.ARTICLE.article
+		+e.ARTICLE.article(data-section='1')
 			header
 				+e.H2.post-title Самое важное в SASS
 				+e.TIME.post-date 22 ноября 2016
@@ -21,7 +21,7 @@ mixin blog-content()
 				|      return null
 				br
 				|     }
-		+e.ARTICLE.article
+		+e.ARTICLE.article(data-section='2')
 			header
 				+e.H2.post-title Приемы в верстке, без которых не обходится ни один сайт
 				+e.TIME.post-date 12 ноября 2016
@@ -29,7 +29,7 @@ mixin blog-content()
 				+lorem(150)
 			p
 				+lorem(300)
-		+e.ARTICLE.article
+		+e.ARTICLE.article(data-section='3')
 			header
 				+e.H2.post-title Самый необходимый набор gulp плагинов
 				+e.TIME.post-date 12 ноября 2016
@@ -37,7 +37,7 @@ mixin blog-content()
 				+lorem(50)
 			p
 				+lorem(200)
-		+e.ARTICLE.article
+		+e.ARTICLE.article(data-section='4')
 			header
 				+e.H2.post-title Почему я выбрал Jade
 				+e.TIME.post-date 12 ноября 2016

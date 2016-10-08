@@ -8,8 +8,10 @@ mixin promo()
 		+e.top-row
 			+e.A.authorization.btn#authorization(href='authorization.html') Авторизоваться
 		+e.middle-row.container
-			+intro
-			+authorization-form
+			+b.flipper
+				+e.inner
+					+intro
+					+authorization-form
 		+e.bottom-row.container
 			+copyright
 	

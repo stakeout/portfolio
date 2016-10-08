@@ -46,3 +46,25 @@
 			background-color $c_white
 	&__bottom-row
 		text-align center
+.flipper
+	position relative
+	width 23.75rem
+	max-height 25.688rem
+	perspective: 600;
+	&__inner
+		max-height 25.688rem
+		position absolute
+		width 100%
+		top 50%
+		height 50%
+		transform-style preserve-3d
+		transition all 1s ease-in-out
+		// &:hover
+		// 	transform rotateY(180deg)
+	.intro
+		backface-visibility hidden
+		position absolute
+		overflow hidden
+	.authorization
+		transform rotateY(180deg)
+		backface-visibility hidden

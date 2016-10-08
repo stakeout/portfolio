@@ -1,12 +1,12 @@
 mixin blog-navigation()
 	+b.ASIDE.blog-navigation&attributes(attributes)
 		+e.UL.list
+			+e.LI.item._active
+				+e.A.link.link(href='#1') Самое важное в SASS
 			+e.LI.item
-				+e.A.link._active.link(href='#') Самое важное в SASS
+				+e.A.link.link(href='#2') Приемы в верстке, без которых не обходится ни один сайт
 			+e.LI.item
-				+e.A.link.link(href='#') Приемы в верстке, без которых не обходится ни один сайт
+				+e.A.link.link(href='#3') Самый необходимый набор GULP плагинов
 			+e.LI.item
-				+e.A.link.link(href='#') Самый необходимый набор GULP плагинов
-			+e.LI.item
-				+e.A.link.link(href='#') Почему я выбрал Jade
+				+e.A.link.link(href='#4') Почему я выбрал Jade
 				
