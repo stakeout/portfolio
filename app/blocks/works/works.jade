@@ -4,20 +4,23 @@ mixin works()
 		+e.inner
 			+e.H2.title.wings мои работы
 			+e.works-wrapper
-				+technology()
-				+e.presentation РАБОТЫ
-					+e.UL.list
-						+e.LI.item
-						+e.LI.item
-						+e.LI.item
-				+b.controls Контролы
-					+e.UL.list._left
-						+e.LI.item 1
-						+e.LI.item 2
-						+e.LI.item 3
-						+e.LI.item 4
-					+e.UL.list._right
-						+e.LI.item 1
-						+e.LI.item 2
-						+e.LI.item 3
-						+e.LI.item 4
+				+technology
+				+e.presentation
+					//- +e.UL.list
+					//- 	+e.LI.item
+					//- 	+e.LI.item
+					//- 	+e.LI.item
+				+b.controls
+					+e.wrapper
+						+e.display._left
+							+e.UL.list._left
+								+e.LI.item.active
+								+e.LI.item
+								+e.LI.item
+								+e.LI.item
+						+e.display._right
+							+e.UL.list._right
+								+e.LI.item.active
+								+e.LI.item
+								+e.LI.item
+								+e.LI.item

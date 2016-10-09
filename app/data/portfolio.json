@@ -1,0 +1,24 @@
+[{
+
+	"site" :"123",
+	"url":"http://..",
+	"image":"***.jpeg",
+	"techs": ["a","b"]
+
+},
+{
+	"site" :"345",
+	"url":"http://..",
+	"image":"***.jpeg",
+	"techs": ["a","b"]
+
+},
+{
+	"site" :"567",
+	"url":"http://..",
+	"image":"***.jpeg",
+	"techs": ["a","b"]
+
+}
+
+]

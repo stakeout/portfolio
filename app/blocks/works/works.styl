@@ -56,14 +56,6 @@
 			display flex
 			flex-direction column
 			min-height rem(1015px)
-	&__controls
-		float right
-		width 50%
-		min-height rem(230px)
-		@media mqTablet
-			float none
-			order 3
-			min-height rem(215px)
 	&__presentation
 		float right
 		min-height rem(515px)
@@ -72,3 +64,68 @@
 			float none
 			width 100%
 			min-height rem(530px)
+.controls
+	float right
+	width 50%
+	min-height rem(230px)
+	@media mqTablet
+		float none
+		width 100%
+		order 3
+		min-height rem(215px)
+	&__wrapper
+		display -webkit-flex
+		display -ms-flex
+		display flex
+		min-height inherit
+	&__display
+		position relative
+		height inherit
+		width 100%
+		overflow hidden
+		cursor pointer
+		outline 1px solid
+	&__list
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+		background-color rgba(136, 131, 114, 0.5)
+		&:before
+			position absolute
+			display inline-block
+			content: ''
+			top calc(50% - 15px)
+			left calc(50% - 15px)
+			transform translate(-50%, -50%)
+			transform rotate(-45deg)
+			width 30px
+			height 30px
+			background-color transparent
+			border-left 10px solid #fff
+			border-bottom 10px solid #fff
+			opacity 1
+		&_right
+			li
+				top 100%
+			&:before
+				transform rotate(135deg)
+	&__item
+		position absolute
+		top -100%
+		left 0
+		width 100%
+		height 100%
+		&.active
+			top 0%
+		img
+			display block
+			position absolute
+			max-width 100%
+			max-height 100%
+			top 0
+			right 0
+			bottom 0
+			left 0
+			margin auto
