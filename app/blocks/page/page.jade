@@ -1,5 +1,6 @@
 include /data/mixins
-
+include /blocks/slide-nav/slide-nav
 mixin page()
 	+b('body').page&attributes(attributes)
 		block
+		+slide-nav

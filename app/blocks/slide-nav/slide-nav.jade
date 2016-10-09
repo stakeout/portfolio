@@ -1,15 +1,11 @@
 mixin slide-nav()
 	+b.slide-nav&attributes(attributes)
-		+e.inner
-			+e.left-column
-				nav
+		nav
+			+e.UL.fullscreen-menu
+				+e.LI.item
 					+e.A.link.link(href='works.html') Мои работы
-					+e.A.link.link(href='about.html') Об мне
+				+e.LI.item
+					+e.A.link.link(href='about.html') Обо мне
+				+e.LI.item
 					+e.A.link.link(href='blog.html') Блог
-			+e.right-column
-				address
-					+e.UL.list
-						+e.LI.item
-						
-					
-			
+		

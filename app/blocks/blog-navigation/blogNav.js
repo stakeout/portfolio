@@ -1,32 +1,42 @@
 export default () => {
-	showArticle(window.location.hash, true);
+	const articleBox = $('.blog-content__article');
+	// showArticle(window.location.hash, true);
 	const blogNavBlock = document.querySelector('.blog-navigation__list');
 	const link = $('.blog-navigation__link');
-
-	window.onscroll = function () {
-		const scrolled = window.pageYOffset || document.documentElement.scrollTop;
-		if (scrolled >= 460){
-			blogNavBlock.classList.add('blog-nav-fixed');
-		}else {
-			blogNavBlock.classList.remove('blog-nav-fixed');
-		}
-		checkArticles();
-	};
-	// navigation
-	function showArticle(article, isAnimate) {
-		const direction = article.replace(/#/, '');
-		const reqSection = $('.blog-content__article').filter('[data-section="' + direction + '"]');
-		const reqSectionPos = reqSection.offset().top;
-		if (isAnimate){
-			$('html, body').animate({scrollTop: reqSectionPos}, 500);
-		}else {
-			$('html, body').scrollTop(reqSectionPos);
+	if (articleBox) {
+		window.onscroll = function () {
+			const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+			if (scrolled >= 460) {
+				blogNavBlock.classList.add('blog-nav-fixed');
+			}else {
+				blogNavBlock.classList.remove('blog-nav-fixed');
+			}
+			checkArticles();
+		};
+		link.on('click', function (e) {
+			e.preventDefault();
+			showArticle($(this).attr('href'), true);
+		});
+		function showArticle(article, isAnimate) {
+			const direction = article.replace(/#/, '');
+			const reqSection = $('.blog-content__article').filter('[data-section="' + direction + '"]');
+			const reqSectionPos = reqSection.offset().top;
+			if (isAnimate) {
+				$('html, body').animate({
+					scrollTop: reqSectionPos
+				}, 500);
+			}else {
+				$('html, body').scrollTop(reqSectionPos);
+			}
 		}
 	}
+	// navigation
+
+
 	function checkArticles() {
 		$('.blog-content__article').each(function () {
 			const $this = $(this);
-			const topEdge = $this.offset().top - 150;
+			const topEdge = $this.offset().top - 250;
 			const bottomEdge = topEdge + $this.height();
 			const wScroll = $(window).scrollTop();
 			if (topEdge < wScroll && bottomEdge > wScroll) {
@@ -42,8 +52,4 @@ export default () => {
 	// $(window).scroll(() => {
 	// 	checkArticles();
 	// });
-	link.on('click', function (e) {
-		e.preventDefault();
-		showArticle($(this).attr('href'), true);
-	});
 };
