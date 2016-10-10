@@ -1,4 +1,5 @@
 .authorization
+	position relative
 	max-width 23.75rem
 	min-height 24.688rem
 	padding-top 35px
@@ -7,6 +8,10 @@
 	border-radius 5px
 	text-align center
 	font-size 0
+	@media mqSmartphone
+		left 75px
+		width rem(300px)
+		min-height rem(395px)
 	&__title
 		display block
 		margin-bottom 28px
@@ -91,6 +96,8 @@
 			height 45px
 			padding-left 65px
 			border-radius 5px
+		@media mqSmartphone
+			max-width rem(300px)
 		&_checkbox,
 		&_radio
 			display none
