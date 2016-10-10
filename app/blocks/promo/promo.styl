@@ -48,15 +48,14 @@
 		text-align center
 .flipper
 	position relative
-	width 23.75rem
-	max-height 25.688rem
 	perspective: 600;
 	&__inner
+		max-width 23.75rem
 		max-height 25.688rem
 		position absolute
-		width 100%
 		top 50%
 		height 50%
+		transform translate(-50%, -50%)
 		transform-style preserve-3d
 		transition all 1s ease-in-out
 		// &:hover

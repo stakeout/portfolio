@@ -7,6 +7,7 @@ block head
 	- var pageTitle = 'Мои работы';
 	- var pageDescription = '';
 	- var pageKeywords = '';
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js')
 block content
 	+header({
 		modifier: 'works',
@@ -15,3 +16,9 @@ block content
 		})
 	+main
 	+footer
+	script#sliderLeftTemplate(type='text/x-handlebars-template').
+		<h3 class="wings winngs_top">{{data.site}}</h3>
+		<ul class="technology__list"></ul>
+		<a class="technology__go-to-site link btn" href="{{data.url}}">Посмотреть сайт</a>
+
+	

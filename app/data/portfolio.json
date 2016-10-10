@@ -2,7 +2,7 @@
 
 	"site" :"123",
 	"url":"http://..",
-	"image":"***.jpeg",
+	"image":"http//placehold.it/200x150",
 	"techs": ["a","b"]
 
 },
