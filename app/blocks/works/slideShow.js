@@ -1,66 +1,24 @@
 export default () => {
 	let counter = 1;
 	let flag = true;
-	function renderingLeftSlidePart() { // функция рендера разметки левой части
-		const container = $('.technology');
-		const source = $('#sliderLeftTemplate').html();
+
+	function renderingSlider(data) { // функция рендера разметки левой части
+		const container = $('.works__works-wrapper');
+		const source = $('#slider').html();
+		Handlebars.registerHelper('reverse', function (arr) {
+			arr.reverse();
+		});
 		const templateFn = Handlebars.compile(source);
-		container.append(templateFn());
+		container.append(templateFn(data));
 	}
 	$.ajax({
 		method: 'GET',
 		dataType: 'json',
 		url: 'assets/data/portfolio.json',
 		success(data) {
-			const presentationImg = $('.presentation__list');
-			const listTechnology = $('.technology__list');
-			const listRight = $('.controls__display .controls__list_right');
-			const listLeft = $('.controls__display .controls__list_left');
-			const jsonLength = data.length;
-			const objData = data;
-			console.log(objData);
-			for (let i = 0; i < jsonLength; i++) {
-				let leftLi = $('<li>', {
-					html: data[i].site,
-					class: 'controls__item'
-				}).css('background-image', 'url(' + data[i].bgImage + ')');
-
-				let rightLi = $('<li>', {
-					html: data[jsonLength - 1 - i].site,
-					class: 'controls__item'
-				}).css('background-image', 'url(' + data[jsonLength - 1 - i].bgImage + ')');
-						// .append($('<img>', {src: data[jsonLength - 1 - i].bgImage}));
-
-				let wrapImg = $('<li>', {
-					class: 'presentation__item'
-				}).append($('<img>', {
-					src: data[i].largeImage,
-					class: 'image'
-				}));
-
-				let usedSkills = $('<li>', {
-					html: data[i].techs,
-					class: 'technology__item'
-				});
-
-				if (i === 0) {
-					leftLi.addClass('active');
-					rightLi.addClass('active');
-					wrapImg.addClass('active');
-					usedSkills.addClass('active');
-				}
-
-				listLeft.append(leftLi);
-				listRight.append(rightLi);
-				presentationImg.append(wrapImg);
-				listTechnology.append(usedSkills);
-			}
-			renderingLeftSlidePart();
+			renderingSlider(data);
 			eventLalal();
 		}
-				// error() {
-				//
-				// }
 	});
 
 	function eventLalal() {
@@ -113,6 +71,16 @@ export default () => {
 					reqImage.addClass('active');
 				});
 
+				const techs = $('.technology');
+				const activeTech = techs.filter('.active');
+				const reqTech = techs.eq(counter);
+
+				reqTech.animate({
+					top: '0%'
+				}, duration, function () {
+					activeTech.removeClass('active').css('top', '-100%');
+					reqTech.addClass('active');
+				});
 
 				counter++;
 				$.when(leftSlider, rightSlider).done(function (data1, data2) {
@@ -126,7 +94,7 @@ export default () => {
 
 
 		});
-			// правый контрол слайдера
+		// правый контрол слайдера
 		$('.controls__display_right .controls__item').on('click', function () {
 
 			const $this = $(this);

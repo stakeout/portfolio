@@ -16,9 +16,47 @@ block content
 		})
 	+main
 	+footer
-	script#sliderLeftTemplate(type='text/x-handlebars-template').
-		<h3 class="wings winngs_top">{{data.site}}</h3>
-		<ul class="technology__list"></ul>
-		<a class="technology__go-to-site link btn" href="{{data.url}}">Посмотреть сайт</a>
+	script#slider(type='text/x-handlebars-template').
+		{{#each this}}
+		<div class="technology {{#if @first}}active{{/if}}">
+			<h3 class="wings winngs_top">{{site}}</h3>
+			<div class="technology__list">{{techs}}</div>
+			<a class="technology__go-to-site link btn" href="{{url}}">Посмотреть сайт</a>
+		</div>
+		{{/each}}
+		<div class="presentation">
+			<div class="inner">
+				<ul class="presentation__list">
+					{{#each this}}
+						<li class="presentation__item {{#if @first}}active{{/if}}" >
+							<img src="{{largeImage}}" class="image"/>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="controls__inner">
+			<div class="controls__display controls__display_left">
+				<ul class="controls__list controls__list_left">
+					{{#each this}}
+						<li class="controls__item {{#if @first}}active{{/if}}">
+							<img src="{{bgImage}}" class="image"/>
+						</li>
+				  {{/each}}
+				</ul>
+			</div>
+			<div class="controls__display controls__display_right">
+				<ul class="controls__list controls__list_right">
+				{{reverse this}}
+					{{#each this}}
+						<li class="controls__item {{#if @first}}active{{/if}}">
+							<img src="{{bgImage}}" class="image"/>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+			</div>
+		</div>
 
 	
