@@ -90,13 +90,18 @@
 		&_about
 			&:before
 				position absolute
-				width 65.277%
+				width 100%
 				min-height 314px
 				top calc(50% - 157px)
-				left calc(50% - 32.638%)
+				left calc(50% - 537px)
 				content ''
 				background url(../images/portfolio_header.svg) no-repeat
+				background-size 1175px 313px
 				opacity .1
+				@media (max-width: 1200px)
+					left calc(45% - 537px)
+					background-size 1175px 313px
+
 				@media mqTablet
 					display none
 	&__top-row

@@ -5,6 +5,7 @@ import preloader from '../blocks/preloader/preloader';
 import blogNav from '../blocks/blog-navigation/blogNav';
 import fullScreenMenu from '../blocks/header/fullscreenMenu';
 import slideShow from '../blocks/works/slideShow';
+import validationForms from '../blocks/authorization-form/authorization';
 
 $(() => {
 	svg4everybody();
@@ -13,4 +14,5 @@ $(() => {
 	blogNav();
 	fullScreenMenu();
 	slideShow();
+	validationForms();
 });
