@@ -7,6 +7,7 @@
 	display none
 	&.active
 		display block
+		text-align center
 	@media mqTablet
 		float none
 		width 100%
@@ -20,11 +21,8 @@
 		padding-bottom 30px
 	&__list
 		position relative
-		display -webkit-flex
-		display -ms-flex
-		display flex
-		justify-content: center;
-		min-width rem(420px)
+		left calc(50% - 210px)
+		max-width rem(420px)
 		margin-bottom 40px
 		margin-top -10px
 		padding-top 18px
@@ -34,6 +32,8 @@
 		font-size 1rem
 		font-weight 500
 		text-transform uppercase
+		border-top 2px solid $c_green
+		border-bottom 2px solid $c_green
 		@media mqSmartphone
 			min-width 100%
 			padding-top 0
@@ -42,24 +42,6 @@
 			margin-bottom 20px
 			line-height 30px
 			font-size 0.875rem
-		&:before,
-		&:after
-			position absolute
-			content ''
-			width 420px
-			height 2px
-			opacity 0.3
-			background-color #009688
-			@media mqSmartphone
-				width 100%
-		&:before
-			top 0
-		&:after
-			bottom 0
-	&__item
-		display none
-		&.active
-			display block
 	h3
 		max-width 350px
 		margin-bottom 35px

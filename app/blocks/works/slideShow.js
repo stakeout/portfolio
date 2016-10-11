@@ -1,3 +1,4 @@
+// THIS FILE IS AUTO GENERATED :)
 export default () => {
 	let counter = 1;
 	let flag = true;
@@ -58,29 +59,23 @@ export default () => {
 					rightActive.removeClass('active').css('top', '100%');
 					rightSlider.resolve($(this));
 				});
-
-
 				const images = $('.presentation__item');
 				const activeImage = images.filter('.active');
 				const reqImage = images.eq(counter);
 
 				reqImage.animate({
-					top: '0%'
+					top: '0%' // 0
 				}, duration, function () {
-					activeImage.removeClass('active').css('top', '-100%');
+					activeImage.removeClass('active').css('top', '-100%'); // -100,
 					reqImage.addClass('active');
 				});
 
 				const techs = $('.technology');
 				const activeTech = techs.filter('.active');
 				const reqTech = techs.eq(counter);
+				activeTech.removeClass('active');
+				reqTech.addClass('active');
 
-				reqTech.animate({
-					top: '0%'
-				}, duration, function () {
-					activeTech.removeClass('active').css('top', '-100%');
-					reqTech.addClass('active');
-				});
 
 				counter++;
 				$.when(leftSlider, rightSlider).done(function (data1, data2) {
@@ -134,13 +129,17 @@ export default () => {
 				const images = $('.presentation__item');
 				const activeImage = images.filter('.active');
 				const reqImage = images.eq(counter);
-
 				reqImage.animate({
-					top: '0%'
+					top: '-100%' // 0,-100,100,100
 				}, duration, function () {
-					activeImage.removeClass('active').css('top', '-100%');
+					activeImage.removeClass('active').css('top', '100%'); // -100,0,0,-100
 					reqImage.addClass('active');
 				});
+				const techs = $('.technology');
+				const activeTech = techs.filter('.active');
+				const reqTech = techs.eq(techs.length - 1 - counter);
+				activeTech.removeClass('active');
+				reqTech.addClass('active');
 				counter++;
 				$.when(leftSlider, rightSlider).done(function (data1, data2) {
 					data1.addClass('active');

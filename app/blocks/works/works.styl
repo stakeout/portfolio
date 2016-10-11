@@ -45,6 +45,7 @@
 			font-size 2.188rem
 			line-height 2.625rem
 	&__works-wrapper
+		position relative
 		margin-right -10px
 		margin-left -10px
 		min-height rem(745px)
@@ -105,6 +106,7 @@
 		left 0
 		li
 			background-color rgba(136, 131, 114, 0.5)
+			border-right 1px solid rgba(136, 131, 114, 0.7)
 			&:before
 				position absolute
 				display inline-block
@@ -119,11 +121,29 @@
 				border-left 10px solid #fff
 				border-bottom 10px solid #fff
 				opacity 1
+				z-index 13
+			&:after
+				position absolute
+				content ''
+				left 0
+				top 0
+				right 0
+				width 100%
+				height 100%
+				background-color inherit
+				z-index 12
+			&:hover
+				&:before
+					transform rotate(-45deg) scale(1.5)
+
 		&_right
 			li
 				top 100%
 				&:before
 					transform rotate(135deg)
+				&:hover
+					&:before
+						transform rotate(135deg) scale(1.5)
 	&__item
 		position absolute
 		top -100%
