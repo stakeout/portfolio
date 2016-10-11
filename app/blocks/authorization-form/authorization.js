@@ -1,7 +1,7 @@
 export default () => {
 	$('form').each(function (){
 		const form = $(this);
-		const inputField = $('input[type=text], input[type=password], textarea');
+		const inputField = $('input[type=text], input[type=email], input[type=password], textarea');
 		const checkBox = $('input[type=checkbox]');
 		const radioBox = $('input[type=radio]');
 		const submitBtn = $('button[type=submit]');
