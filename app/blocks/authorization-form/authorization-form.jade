@@ -4,8 +4,10 @@ mixin authorization-form()
 		+e.FORM.FORM(action='' method='')
 			+e.B.title Авторизуйтесь
 			+e.LABEL.label._login(for='login')
+				+icon('login', 15, 17)
 				+e.INPUT.input-form._login(type='text' name='login' id='login' placeholder='Логин')
 			+e.LABEL.label._password(for='password')
+				+icon('password', 18, 17)
 				+e.INPUT.input-form._password(type='password' name='password' id='password' placeholder='Пароль')
 			+e.controls
 				+e.INPUT.input-form._checkbox(type='checkbox' name='captcha' id='captcha' required)
