@@ -91,7 +91,6 @@ export default () => {
 		});
 		// правый контрол слайдера
 		$('.controls__display_right .controls__item').on('click', function () {
-
 			const $this = $(this);
 			const container = $this.closest('.controls__display');
 			const items = container.find('.controls__item');
@@ -138,10 +137,11 @@ export default () => {
 				const techs = $('.technology');
 				const activeTech = techs.filter('.active');
 				const reqTech = techs.eq(techs.length - 1 - counter);
+				console.log(techs.length);
 				activeTech.removeClass('active');
 				reqTech.addClass('active');
 				counter++;
-				$.when(leftSlider, rightSlider).done(function (data1, data2) {
+				$.when(leftSlider, rightSlider, techs).done(function (data1, data2) {
 					data1.addClass('active');
 					data2.addClass('active');
 					flag = true;
